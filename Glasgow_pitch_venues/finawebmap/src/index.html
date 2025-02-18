@@ -1,0 +1,80 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Interactive web map of the Glasgow pitch venues</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Mapbox GL CSS & JS -->
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
+    
+    <!-- Mapbox Geocoder CSS & JS -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    
+    <div id="filter-container">
+  <label for="facility-select">Types of sports：</label>
+  <select id="facility-select">
+    <option value="all">all</option>
+    <option value="Football">Football</option>
+    <option value="Rugby">Rugby</option>
+    <option value="Cricket">Cricket</option>
+    <option value="Hockey">Hockey</option>
+  </select>
+</div>
+    
+<div id="surface-container">
+  <label for="surface-select">Types of surfaces
+：</label>
+  <select id="surface-select">
+    <option value="all">all</option>
+    <option value="Grass">Grass</option>
+    <option value="3G">3G</option>
+    <option value="Sand-filled">Sand-filled</option>
+    <option value="Blaes">Blaes</option>
+    <option value="Waterbased">Waterbased</option>
+  </select>
+</div>
+<div id="text">
+  <label> Click icons to show more infermation!</label>
+</div>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1Ijoiem9rZXIxIiwiYSI6ImNtNXpnZ2htMzAyZmEya3NvcWN4aTR5ZGwifQ.OtIFU_pj7rWSkdeigNAxfA';
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/zoker1/cm775k5n2009f01r80lw79wqk',
+        center: [-4.2518, 55.8642],
+        zoom: 11
+      });
+
+
+      map.addControl(new mapboxgl.NavigationControl());
+
+
+
+    </script>
+  </body>
+</html>
