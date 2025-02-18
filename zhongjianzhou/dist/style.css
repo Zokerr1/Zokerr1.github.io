@@ -1,0 +1,64 @@
+h3 {
+font-family: Lato, sans-serif;
+font-size: 17px;
+}
+p {
+font-size: 16px;
+font-family: Lato, sans-serif;
+}
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+#text {
+  position: absolute;
+  font-family: Lato, sans-serif;
+  top: 60px;
+  left: 10px;
+  background-color: lightyellow;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+}
+.tag {
+  background-color: #99d8c9;
+  color: #333333;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 2px solid lightblue;
+  font-size: 14px;
+  font-family: Sigmar, sans-serif;
+  text-transform: capitalize;
+  white-space: nowrap;
+  margin: 5px 0;
+  display: inline-block;
+}
+
+.my-popup .mapboxgl-popup-content {
+width: 300px;
+background: rgba(245, 245, 220, 0.9);
+border: 1px solid black;
+padding: 20px;
+color: black;
+}
+
+#filter-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#surface-container {
+ position: absolute;
+  top: 10px;
+  left: 250px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
